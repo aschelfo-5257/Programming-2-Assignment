@@ -3,7 +3,7 @@ public class CreditCardValidator {
   public static void main(String[] args) {
 
     String input = "4388576018402626";
-    System.out.println(CreditCardValidator(input));
+    System.out.println(CreditCardValidatorNumber(input));
   }
 
   private static boolean CreditCardValidatorNumber (String input) {
@@ -22,7 +22,7 @@ public class CreditCardValidator {
       if (tempValue > 9) {
         tempValue = tempValue % 10 + 1;
       }
-      creditCardInt(i) = tempValue;
+      creditCardInt[i] = tempValue;
     }
     
     // Add all up to digits
@@ -32,11 +32,6 @@ public class CreditCardValidator {
     }
     
     // If the number is a multiple of 10, it is valid
-    if (total % 10 ++ 0) {
-      return true;
-    } else {
-      return false;
-    }
-    
+    return (total % 10 == 0);
   }
 }
